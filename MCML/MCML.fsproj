@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework> 
+
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Tailcalls>true</Tailcalls>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Collections.fs" />
+    <Compile Include="AST.fs" />
+    <Compile Include="Errors.fs" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="TypeInference.fs" />
+    <Compile Include="Interpreter.fs" />
+    <Compile Include="WPFEditor.fs" />
+    <EmbeddedResource Include="Examples.fsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+</Project>
